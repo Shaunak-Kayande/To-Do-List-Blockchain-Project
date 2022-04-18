@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	
+	<!-- App CSS-->
+	<style>
+	.pad
+	{
+	font-family: "Times New Roman", Times, serif;
+	color: red; 
+	font-size: 30px;
+	position: absolute;
+	top: 100px;
+    left: 27%;	
+	}
+
+	#list{
+		position:relative;
+		top:-50%;
+		right: 7%;
+	}
+	
+	.task-count 
+	{
+	font-family: "Times New Roman", Times, serif;
+	position: absolute;
+	top: 25%;
+    left: 20%;
+	}
+
+	.task-card
+    {
+	width: 350px;
+	height: 225px;			
+	border-radius: 25px 25px 10px 10px;
+	opacity: 1;
+	position: relative;
+	bottom: 420px;
+	left: 180px;
+	}
+
+	.fab
+	{
+	background: #2699FB;
+	border-radius: 400px;
+	border: 0;
+	position: absolute;
+	top: 240px;
+    left: 300px;
+	}
+
+	.add-task-container
+    {
+	top: 1px;
+	width: 400px;
+	height: 187px;
+	background: #FFFFFF;
+	border-radius: 25px 25px 0px 0px;
+	opacity: 1;
+	position: absolute;
+	}
+	
+
+		.task-done {
+			color: gray;
+			text-decoration: line-through;
+		}
+	</style>
+	<title>TO-DO LIST</title>
+</head>
+
+<div class="container">
+	<img src="./pad.png" alt="Snow" style="width:90%; height: 700px;">
+	<div class="pad"><b><u>TO-DO LIST</b></u></div>
+	<body style="background: #aeeee3">
+		<div class="card-container my-5 border-left-0"></div>
+		<p id="taskCount" class="task-count text-black">0 Task</p>
+
+
+<div class="task-card">
+<!-- Floating Action Button -->
+<button id="fab" class="fab float-right" data-toggle="modal" data-target="#add-task-container">
+<img clas="m-auto" src="./plus.png"
+alt="" height="26" width="26">
+</button>
+<!-- #Floating Action Button -->
+
+<!-- Task List-->
+<ul id="list" class="list-group mt-3">
+</ul>
+<!-- #Task List-->
+
+<!-- Add Task Modal -->
+<div id="add-task-container" class="modal add-task-container" data-backdrop="static">
+<div class="container">
+						<div class="col mx-2">
+							<h5 class="text-primary text-center mt-4">New Task</h5>
+							<input id="new-task" class="mt-3" type="text">
+							<button type="button" data-dismiss="modal" class="btn btn-primary btn-block mt-3"
+								onclick="addTask(document.getElementById('new-task').value);">Add
+								Task</button>
+						</div>
+					</div>
+				</div>
+				<!-- #Add Task Modal -->
+
+			</div>
+	</div>
+</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+	<!-- App and related files JS-->
+	<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/getAccount.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
