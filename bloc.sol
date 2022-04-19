@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 pragma experimental ABIEncoderV2;
 // Creating a contract
 contract Bloc{
-    
+	
 // Defining a structure to
 // store a task
 struct Task
@@ -13,14 +13,14 @@ bool isDone;
 }
 
 mapping (address => Task[]) private Users;
-    
+	
 // Defining function to add a task
 function addTask(string calldata _task) external
 {
 Users[msg.sender].push(Task({
-    task:_task,
-    isDone:false
-    }));
+	task:_task,
+	isDone:false
+	}));
 }
 
 // Defining a function to get details of a task
@@ -48,5 +48,3 @@ function getTaskCount() external view returns (uint256)
 return Users[msg.sender].length;
 }
 }
-
-
